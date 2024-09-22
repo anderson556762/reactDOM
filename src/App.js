@@ -15,7 +15,7 @@ class App extends Component{
 aumentar(){
   let state = this.state;
   state.contador += 1;
-  state.nome="alberi grande jogador do abc"
+  state.nome="alberi grande jogador do abc!!"
   this.setState(state)
 }
 
