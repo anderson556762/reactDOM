@@ -1,86 +1,84 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .app-container {
-    text-align: center;
-    width: 80%;
-    max-width: 900px;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .app-header {
-    margin-bottom: 2rem;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  p {
-    color: #666;
-  }
-  
-  .content-section {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-  }
-  
-  .card {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 200px;
-  }
-  
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  
-  .btn-primary, .btn-secondary {
-    padding: 0.8rem 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn-primary {
-    background-color: #f77f00;
-    color: white;
-  }
-  
-  .btn-secondary {
-    background-color: #219ebc;
-    color: white;
-  }
-  
-  .btn-primary:hover, .btn-secondary:hover {
-    opacity: 0.9;
-  }
-  
-  .app-footer {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #999;
-  }
+/* Background geral e estilo da página */
+body {
+  background-color: #0d0d0d;
+  font-family: 'Cinzel', serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #e5e5e5;
+}
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #1b1b1b, #050505);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px #000;
+  max-width: 600px;
+  width: 90%;
+}
+
+.title {
+  font-size: 3rem;
+  color: #d4af37;
+  text-shadow: 0 0 10px #f00, 2px 2px 10px #8b0000;
+  margin-bottom: 20px;
+}
+
+/* Input */
+.input-container {
+  margin-top: 20px;
+}
+
+.input-text {
+  font-size: 1.2rem;
+  color: #b8b8b8;
+  text-shadow: 0 0 5px #111;
+}
+
+.input-field {
+  background-color: #262626;
+  border: 2px solid #8b0000;
+  border-radius: 5px;
+  padding: 10px;
+  width: 80%;
+  color: #f5f5f5;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.input-field::placeholder {
+  color: #888;
+}
+
+.input-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #8b0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.input-button:hover {
+  background-color: #b22222;
+}
+
+/* Mensagem de boas-vindas */
+.message-container {
+  margin-top: 30px;
+}
+
+.welcome-message {
+  font-size: 1.8rem;
+  color: #d4af37;
+  text-shadow: 0 0 10px #f00, 2px 2px 10px #8b0000;
+  transition: opacity 1s ease-in;
+}

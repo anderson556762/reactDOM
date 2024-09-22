@@ -1,31 +1,37 @@
-import React from "react";
-import './index';
+import React, { useState } from "react";
+import "./index.css";
 
 function App() {
+  const [name, setName] = useState("");
+  const [showMessage, setShowMessage] = useState(false);
+
+  const handleClick = () => {
+    if (name) {
+      setShowMessage(true);
+    }
+  };
+
   return (
     <div className="app-container">
-      <header className="app-header">
-        <h1>Aqui esta minha pagina react</h1>
-        <p>uma pagina moderna e interativa com react</p>
-      </header>
-
-      <section className="content-section">
-        <div className="card">
-          <h2>1</h2>
-          <p>pagina bonita feito com gpt</p>
-          <button className="btn-primary">Explore</button>
+      <h1 className="title">Portão das Sombras</h1>
+      <div className="input-container">
+        <p className="input-text">Quem ousa entrar? Declare seu nome:</p>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Digite seu nome"
+          className="input-field"
+        />
+        <button onClick={handleClick} className="input-button">Entrar</button>
+      </div>
+      {showMessage && (
+        <div className="message-container">
+          <p className="welcome-message">
+            Bem-vindo, {name}. A escuridão te aguarda...
+          </p>
         </div>
-
-        <div className="card">
-          <h2>2</h2>
-          <p>Bem vindo a minha pagina</p>
-          <button className="btn-secondary">veja mais</button>
-        </div>
-      </section>
-
-      <footer className="app-footer">
-        <p>© 2024 App de Anderson JR</p>
-      </footer>
+      )}
     </div>
   );
 }
