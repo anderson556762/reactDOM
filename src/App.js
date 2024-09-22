@@ -1,48 +1,33 @@
-import React, {Component} from 'react';
+import React from "react";
+import './index';
 
-class App extends Component{
+function App() {
+  return (
+    <div className="app-container">
+      <header className="app-header">
+        <h1>Aqui esta minha pagina react</h1>
+        <p>uma pagina moderna e interativa com react</p>
+      </header>
 
-  constructor(props){
-    super(props);
-    this.state = {
-      nome: 'José',
-      contador:0
-    };
-    this.aumentar = this.aumentar.bind(this);
-    this.diminuir = this.diminuir.bind(this);
-}
+      <section className="content-section">
+        <div className="card">
+          <h2>1</h2>
+          <p>pagina bonita feito com gpt</p>
+          <button className="btn-primary">Explore</button>
+        </div>
 
-aumentar(){
-  let state = this.state;
-  state.contador += 1;
-  state.nome="alberi grande jogador do abc !!!!!"
-  this.setState(state)
-}
+        <div className="card">
+          <h2>2</h2>
+          <p>Bem vindo a minha pagina</p>
+          <button className="btn-secondary">veja mais</button>
+        </div>
+      </section>
 
-diminuir(){
-  let state = this.state;
-  state.contador -= 1;
-  this.setState(state)
-}
-
-
-   render(){
-    return(
-    <div>
-    <h1>{this.state.nome}</h1>
-
-
-
-    <h2>
-    <button onClick={this.diminuir}>-</button>
-        {this.state.contador}
-    <button onClick={this.aumentar}>+</button>
-    </h2>
-
-
+      <footer className="app-footer">
+        <p>© 2024 App de Anderson JR</p>
+      </footer>
     </div>
-  )
+  );
 }
 
-}
 export default App;
